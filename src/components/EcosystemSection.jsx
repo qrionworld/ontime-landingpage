@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 
 export default function EcosystemSection() {
   return (
-    <section className="py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="relative pt-24 pb-24 bg-white overflow-hidden">
+
+      <div className="max-w-7xl mx-auto ">
 
         {/* ================= HEADER ================= */}
         <motion.div
