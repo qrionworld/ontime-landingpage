@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/Icon Ontime.png";
 
 const menus = [
   { label: "Beranda", id: "beranda" },
@@ -51,7 +51,7 @@ export default function Header() {
         <img
           src={logo}
           alt="Ontuition"
-          className="h-10 cursor-pointer"
+          className="h-14 cursor-pointer"
         />
 
         {/* MENU */}

@@ -48,3 +48,9 @@
   height: 12px;
 }
 
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+

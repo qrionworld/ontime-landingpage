@@ -1,7 +1,8 @@
-// src/components/PricingPackages.jsx
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import BlurBg from "../assets/blur.png";
+import { WhatsAppIcon, BankIcon } from "./icon";
+
 
 export default function PricingPackages() {
   const [plan, setPlan] = useState("6");
@@ -24,6 +25,21 @@ export default function PricingPackages() {
     ],
   };
 
+  const addons = [
+  {
+    title: "Notifikasi ke WA Orang Tua",
+    price: "Rp 5.000.000 / Tahun",
+    icon: <WhatsAppIcon className="w-7 h-7 text-[#33B77E]" />,
+  },
+  {
+    title: "Integrasi E-Channel",
+    desc: "(VA, Transfer Antar Bank, QRIS)",
+    price: "Rp 2.000.000 / Instalasi",
+    icon: <BankIcon className="w-7 h-7 text-[#33B77E]" />,
+  },
+];
+
+
   return (
     <section className="py-10 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto -mt-20 text-center">
@@ -33,10 +49,7 @@ export default function PricingPackages() {
           initial={{ opacity: 0, y: -60 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{
-            duration: 2.5,
-            ease: [0.22, 1, 0.36, 1],
-          }}
+          transition={{ duration: 2.5, ease: [0.22, 1, 0.36, 1] }}
           className="
             relative pt-60 pb-40 mb-10 flex flex-col items-center justify-center
             bg-gradient-to-b from-white via-[#e9fff3] to-white rounded-3xl
@@ -63,9 +76,10 @@ export default function PricingPackages() {
                 key={p}
                 onClick={() => setPlan(p)}
                 className={`px-10 py-3 font-semibold transition
-                  ${plan === p
-                    ? "bg-[#33B77E] text-white"
-                    : "text-[#33B77E] bg-transparent"
+                  ${
+                    plan === p
+                      ? "bg-[#33B77E] text-white"
+                      : "text-[#33B77E] bg-transparent"
                   }
                 `}
               >
@@ -84,8 +98,8 @@ export default function PricingPackages() {
             hidden: {},
             visible: {
               transition: {
-                delayChildren: 0.9, // jeda setelah header
-                staggerChildren: 0.9, // jeda antar card
+                delayChildren: 0.9,
+                staggerChildren: 0.9,
               },
             },
           }}
@@ -95,10 +109,7 @@ export default function PricingPackages() {
             <motion.div
               key={index}
               variants={{
-                hidden: {
-                  opacity: 0,
-                  y: 80,
-                },
+                hidden: { opacity: 0, y: 80 },
                 visible: {
                   opacity: 1,
                   y: 0,
@@ -112,7 +123,6 @@ export default function PricingPackages() {
               }}
               className="bg-[#F3FFF9] border-4 border-[#33B77E] rounded-3xl -mt-20 p-11 text-left shadow-lg"
             >
-              {/* HEADER CARD */}
               <div className="flex items-center justify-between mb-5">
                 <span className="bg-[#33B77E] text-white px-6 py-2 rounded-xl font-bold">
                   {item.tier}
@@ -122,25 +132,70 @@ export default function PricingPackages() {
                 </span>
               </div>
 
-              {/* PRICE */}
               <div className="text-3xl font-bold text-[#33B77E] mb-8">
                 Rp{item.price}/Bulan
               </div>
 
-              {/* FEATURES */}
               <ul className="space-y-3 text-gray-700 mb-10">
-                <li>• Lorem Ipsum sit dolor amet</li>
-                <li>• Lorem Ipsum sit dolor amet</li>
-                <li>• Lorem Ipsum sit dolor amet</li>
-                <li>• Lorem Ipsum sit dolor amet</li>
+                <li>• Manajemen Akademik</li>
+                <li>• Manajemen Keuangan</li>
+                <li>• Absensi & Nilai</li>
+                <li>• Support & Update</li>
               </ul>
 
-              {/* BUTTON */}
-              <button className="w-full border-2 border-[#33B77E] text-[#33B77E] py-4 rounded-xl font-bold hover:bg-[#33B77E] hover:text-white transition">
+              <button className="w-full border-2 border-[#33B77E] text-[#33B77E] py-4 rounded-xl font-bold hover:bg-[#33B77E] hoverhelp transform hover:text-white transition">
                 Pilih Paket
               </button>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* ================= ADD-ON ================= */}
+        <motion.div
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="mt-28"
+        >
+          <h3 className="text-3xl font-bold mb-10">
+            Tingkatkan Produktivitas dengan{" "}
+            <span className="text-[#33B77E]">Add-On</span>
+          </h3>
+
+          <div className="space-y-6 max-w-4xl mx-auto">
+            {addons.map((addon, index) => (
+              <div
+                key={index}
+                className="
+                  flex items-center justify-between
+                  border-4 border-[#33B77E]
+                  rounded-2xl px-8 py-6
+                  bg-white shadow-md
+                "
+              >
+                <div className="flex items-center gap-5">
+                  <div className="w-14 h-14 flex items-center justify-center">
+                    {addon.icon}
+                  </div>
+                  <div className="text-left">
+                    <h4 className="text-lg font-bold">
+                      {addon.title}
+                    </h4>
+                    {addon.desc && (
+                      <p className="text-sm text-gray-500">
+                        {addon.desc}
+                      </p>
+                    )}
+                  </div>
+                </div>
+
+                <div className="text-lg font-bold text-[#33B77E] whitespace-nowrap">
+                  {addon.price}
+                </div>
+              </div>
+            ))}
+          </div>
         </motion.div>
 
       </div>

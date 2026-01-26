@@ -30,7 +30,7 @@ export default function FreeTrialCTA() {
             ease: [0.22, 1, 0.36, 1],
           }}
         >
-          <h2 className="text-[#33B77E] font-extrabold text-4xl sm:text-5xl md:text-6xl mb-8">
+          <h2 className="text-[#33B77E] font-bold text-4xl sm:text-5xl md:text-6xl mb-8">
             Coba Ontime Gratis 14 Hari
           </h2>
 

@@ -14,13 +14,17 @@ import Ling from "../assets/ling.png";
 export default function EcosystemUnifiedSection() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#F0FAF6] to-[#36C48A]">
-
       {/* ===== DECORATIONS ===== */}
-      <img src={Lingkir} className="absolute -top-24 -left-24 w-[600px] opacity-40" />
-      <img src={Lingkan} className="absolute top-[40%] -right-40 w-[700px] opacity-40" />
+      <img
+        src={Lingkir}
+        className="absolute -top-24 -left-24 w-[600px] opacity-40"
+      />
+      <img
+        src={Lingkan}
+        className="absolute top-[40%] -right-40 w-[700px] opacity-40"
+      />
 
       <div className="relative z-10 max-w-7xl mx-auto px-8">
-
         {/* ================= HEADER ================= */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
@@ -62,10 +66,7 @@ export default function EcosystemUnifiedSection() {
             {
               title: "Orang Tua Siswa",
               desc: "Rasa Aman & Monitoring Anak",
-              items: [
-                "Notifikasi WhatsApp",
-                "Riwayat Kehadiran Transparan",
-              ],
+              items: ["Notifikasi WhatsApp", "Riwayat Kehadiran Transparan"],
             },
           ].map((card, i) => (
             <motion.div
@@ -76,7 +77,9 @@ export default function EcosystemUnifiedSection() {
               transition={{ duration: 0.9, delay: i * 0.2 }}
               className="border-4 border-[#33B77E] rounded-2xl p-8 bg-white"
             >
-              <h3 className="text-2xl font-bold text-[#33B77E] mb-2">{card.title}</h3>
+              <h3 className="text-2xl font-bold text-[#33B77E] mb-2">
+                {card.title}
+              </h3>
               <p className="text-gray-600 mb-6">{card.desc}</p>
               <ul className="list-disc list-inside space-y-3">
                 {card.items.map((it, idx) => (
@@ -89,23 +92,31 @@ export default function EcosystemUnifiedSection() {
 
         {/* ================= METODE ABSENSI ================= */}
         <div className="text-center pb-32">
-          <h3 className="text-4xl font-bold text-[#33B77E] mb-16">Metode Absensi</h3>
+          <h3 className="text-4xl font-bold text-[#33B77E] mb-16">
+            Metode Absensi
+          </h3>
           <div className="flex flex-col md:flex-row justify-center gap-24">
-            {[{ img: TapImage, label: "Tap Card" }, { img: MobileAbsensi, label: "Mobile" }].map(
-              (m, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 60 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: i * 0.3 }}
-                  className="flex flex-col items-center"
-                >
-                  <img src={m.img} className="w-[280px] drop-shadow-2xl mb-6" />
-                  <span className="text-2xl font-bold">{m.label}</span>
-                </motion.div>
-              )
-            )}
+            {[
+              { img: TapImage, label: "Tap Card", width: "270px" },
+              { img: MobileAbsensi, label: "Mobile", width: "240px" },
+            ].map((m, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: i * 0.3 }}
+                className="flex flex-col items-center"
+              >
+                <img
+                  src={m.img}
+                  style={{ width: m.width }}
+                  className="drop-shadow-2xl mb-6"
+                />
+
+                <span className="text-2xl font-bold">{m.label}</span>
+              </motion.div>
+            ))}
           </div>
         </div>
 
@@ -129,8 +140,12 @@ export default function EcosystemUnifiedSection() {
             transition={{ duration: 1 }}
             className="text-center mb-20"
           >
-            <h3 className="text-5xl font-bold text-[#33B77E] mb-4">Terintegrasi Dengan QRION</h3>
-            <p className="text-xl text-gray-600">Ekosistem Digitalisasi Sekolah Terlengkap</p>
+            <h3 className="text-5xl font-bold text-[#33B77E] mb-4">
+              Terintegrasi Dengan QRION
+            </h3>
+            <p className="text-xl text-gray-600">
+              Ekosistem Digitalisasi Sekolah Terlengkap
+            </p>
           </motion.div>
 
           {/* TOP DEVICES */}
@@ -142,7 +157,13 @@ export default function EcosystemUnifiedSection() {
               transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
               className="flex flex-col items-center"
             >
-              <span className="-mb-20 px-6 py-2 rounded-full border-2 border-[#33B77E] text-[#33B77E] font-semibold">
+              <span
+                className="-mb-20 px-6 py-2 rounded-full 
+  border-2 border-[#33B77E] 
+  bg-white 
+  text-[#33B77E] 
+  font-bold"
+              >
                 QRION For Teacher
               </span>
               <div className="w-[340px] h-[600px] flex items-center justify-center">
@@ -157,7 +178,7 @@ export default function EcosystemUnifiedSection() {
               transition={{ duration: 1, ease: "easeOut", delay: 1.3 }}
               className="flex flex-col items-center"
             >
-              <span className="-mb-20 px-6 py-2 rounded-full border-2 border-[#33B77E] text-[#33B77E] font-semibold">
+              <span className="-mb-20 px-6 py-2 rounded-full border-2 bg-white border-[#33B77E] text-[#33B77E] font-bold">
                 QRION Mobile
               </span>
               <div className="w-[440px] h-[600px] flex items-center justify-center">
@@ -174,13 +195,12 @@ export default function EcosystemUnifiedSection() {
             transition={{ duration: 1, ease: "easeOut", delay: 1.3 }}
             className="flex flex-col items-center"
           >
-            <span className="mb-6 -mt-40 px-8 py-3 rounded-full border-2 border-[#33B77E] text-[#33B77E] font-semibold">
+            <span className="mb-6 -mt-40 px-8 py-3 rounded-full border-2 bg-white border-[#33B77E] text-[#33B77E] font-bold">
               QRION Ekosistem
             </span>
             <img src={EcosystemImg} className="w-[520px] drop-shadow-2xl" />
           </motion.div>
         </div>
-
       </div>
     </section>
   );
