@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3033:80"
+    volumes:
+      - ./build/logs:/var/log/nginx
+    restart: always
