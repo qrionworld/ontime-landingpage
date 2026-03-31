@@ -29,7 +29,6 @@ export default function Testimoni() {
   return (
     <section className="-mb-20 py-28 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-8">
-
         {/* ================= HEADER ================= */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -38,18 +37,22 @@ export default function Testimoni() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-center font-bold mb-20"
         >
-          <p className="text-black-600 mb-4">
-            Dipercaya berbagai sekolah & yayasan di Indonesia
+          <p className="text-gray-600 text-sm text-2xl sm:text-3xl mb-3 md:mb-4">
+            Dipercaya berbagai sekolah & yayasan
+            <br className="block md:hidden" />
+            <span className="hidden md:inline"> </span>
+            di Indonesia
           </p>
 
-          <h2 className="text-5xl md:text-6xl font-bold text-[#33B77E] mb-6">
-            Otomatisasi Absensi Sekolah <br />
+          <h2 className="text-3xl sm:text-3xl md:text-5xl font-bold text-[#33B77E] mb-4 md:mb-6 leading-tight">
+            Otomatisasi Absensi Sekolah
+            <br className="hidden sm:block" />
             Anda dengan Ontime
           </h2>
 
           <a
             href="#"
-            className="text-black-600 hover:text-[#33B77E] font-medium"
+            className="text-gray-700 hover:text-[#33B77E] text-sm sm:text-base font-medium transition-colors"
           >
             Lihat Cerita Mitra Kami
           </a>
@@ -93,9 +96,7 @@ export default function Testimoni() {
 
             <div className="absolute bottom-6 left-6 text-white">
               <p className="text-3xl font-bold opacity-80">TESTIMONI</p>
-              <p className="text-2xl font-semibold">
-                SMAS Cendana Rumbai
-              </p>
+              <p className="text-2xl font-semibold">SMAS Cendana Rumbai</p>
             </div>
 
             <span className="absolute bottom-6 right-6 bg-black/60 text-white px-4 py-1 rounded-full text-sm">
@@ -126,10 +127,12 @@ export default function Testimoni() {
               ke format digital yang lebih praktis dan terorganisir.
             </p>
 
-            <button className="
+            <button
+              className="
               bg-[#33B77E] text-white px-8 py-4 rounded-full
               font-semibold hover:bg-[#249a67] transition
-            ">
+            "
+            >
               Selengkapnya
             </button>
           </motion.div>
@@ -179,9 +182,7 @@ export default function Testimoni() {
                 {item.title}
               </h4>
 
-              <p className="text-gray-600 text-sm mb-4">
-                {item.desc}
-              </p>
+              <p className="text-gray-600 text-sm mb-4">{item.desc}</p>
 
               <button className="text-sm font-semibold text-white bg-[#33B77E] px-5 py-2 rounded-full hover:bg-[#249a67]">
                 Selengkapnya
@@ -189,7 +190,6 @@ export default function Testimoni() {
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </section>
   );

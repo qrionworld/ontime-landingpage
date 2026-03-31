@@ -23,11 +23,11 @@ export default function ManajementSection() {
           transition={{ duration: 1.3, ease: "easeOut" }}
           className="text-center mb-12 lg:mb-20"
         >
-          <h2 className="text-[#33B77E] text-2xl lg:text-4xl font-bold mb-2">
+          <h2 className="text-[#33B77E] text-3xl lg:text-5xl font-bold mb-4">
             Manajemen Absensi Terlengkap
           </h2>
 
-          <h3 className="text-[#231F20] text-3xl lg:text-5xl font-bold mb-4 lg:mb-6">
+          <h3 className="text-[#231F20] text-2xl lg:text-5xl font-bold mb-4 lg:mb-6">
             Untuk Sekolah Go Digital
           </h3>
 
@@ -38,38 +38,44 @@ export default function ManajementSection() {
         </motion.div>
 
         {/* ================= MOCKUP AREA ================= */}
-        <div className="relative w-full max-w-6xl mx-auto">
-          <div className="relative h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[700px]">
+        <div className="relative w-full max-w-4xl mx-auto">
+          <div className="
+            relative 
+            flex flex-col items-center gap-6
+            sm:block sm:h-[450px]
+            lg:h-[600px] xl:h-[700px]
+          ">
 
-            {/* DASHBOARD BELAKANG (KANAN) */}
+            {/* MOBILE: gambar belakang — center */}
             <motion.div
-              initial={{ opacity: 0, x: 100 }}
+              initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{
-                duration: 0.9,
-                ease: "easeOut",
-                delay: 0.6, // muncul setelah header
-              }}
-              className="absolute right-10 bottom-0 w-[50%] sm:w-[55%] lg:w-[50%] z-20"
+              transition={{ duration: 0.9, ease: "easeOut", delay: 0.4 }}
+              className="
+                w-[80%] max-w-xs sm:max-w-none
+                sm:absolute sm:right-10 sm:bottom-0 sm:w-[55%] lg:w-[50%]
+                z-10
+              "
             >
               <img
                 src={dashboardBack}
                 alt="Dashboard Kalender Akademik"
+                className="w-full h-auto"
               />
             </motion.div>
 
-            {/* DASHBOARD DEPAN (KIRI) */}
+            {/* MOBILE: gambar depan — center */}
             <motion.div
-              initial={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{
-                duration: 0.9,
-                ease: "easeOut",
-                delay: 0.6, // sedikit setelah belakang
-              }}
-              className="absolute left-10 top-0 w-[50%] sm:w-[55%] lg:w-[50%] z-10"
+              transition={{ duration: 0.9, ease: "easeOut", delay: 0.6 }}
+              className="
+                w-[85%] max-w-sm sm:max-w-none
+                sm:absolute sm:left-10 sm:top-0 sm:w-[55%] lg:w-[50%]
+                z-20
+              "
             >
               <img
                 src={dashboardFront}

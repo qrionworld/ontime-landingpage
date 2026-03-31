@@ -6,12 +6,21 @@ const logos = Object.values(
   import.meta.glob("../assets/school/*.png", { eager: true })
 ).map((file) => file.default);
 
+// FUNCTION SHUFFLE (acak array)
+const shuffleArray = (array) => {
+  return [...array].sort(() => Math.random() - 0.5);
+};
+
 export default function SekolahSection() {
   const [isPaused, setIsPaused] = useState(false);
 
+  // ACak tapi stabil (tidak berubah saat re-render)
+  const [shuffledLogos1] = useState(() => shuffleArray(logos));
+  const [shuffledLogos2] = useState(() => shuffleArray(logos));
+
   return (
     <section id="mitra" className="mt-10 bg-white relative z-10">
-      <div className="max-w-7xl mx-auto px-8 text-center relative z-20">
+      <div className="max-w-6xl mx-auto px-4 text-center relative z-20">
 
         {/* TITLE */}
         <motion.div
@@ -20,10 +29,10 @@ export default function SekolahSection() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <h2 className="text-[#33B77E] text-4xl font-bold mb-4">
+          <h2 className="text-[#33B77E] text-2xl md:text-3xl font-bold mb-3">
             Dipercaya Banyak Sekolah di Seluruh Indonesia
           </h2>
-          <p className="text-[#434343] text-base max-w-3xl mx-auto mb-12">
+          <p className="text-[#434343] text-sm md:text-base max-w-2xl mx-auto mb-8 md:mb-12 leading-relaxed">
             Dari sekolah dasar hingga yayasan, Ontuition telah membantu manajemen
             sekolah bekerja lebih efisien dan transparan.
           </p>
@@ -35,20 +44,25 @@ export default function SekolahSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative overflow-hidden mb-10"
+          className="relative overflow-hidden mb-6 md:mb-10"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
           {/* Gradient */}
-          <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-white to-transparent z-30" />
-          <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-white to-transparent z-30" />
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-16 md:w-24 bg-gradient-to-r from-white to-transparent z-30" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-16 md:w-24 bg-gradient-to-l from-white to-transparent z-30" />
 
           <div
-            className="flex gap-10 animate-left"
+            className="flex gap-6 md:gap-10 animate-left"
             style={{ animationPlayState: isPaused ? "paused" : "running" }}
           >
-            {[...logos, ...logos].map((logo, i) => (
-              <img key={i} src={logo} className="h-24 w-auto object-contain" />
+            {[...shuffledLogos1, ...shuffledLogos1].map((logo, i) => (
+              <img
+                key={i}
+                src={logo}
+                alt="logo sekolah"
+                className="h-14 md:h-20 w-auto object-contain opacity-80 hover:opacity-100 transition duration-300"
+              />
             ))}
           </div>
         </motion.div>
@@ -58,21 +72,26 @@ export default function SekolahSection() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.9 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="relative overflow-hidden"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
           {/* Gradient */}
-          <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-white to-transparent z-30" />
-          <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-white to-transparent z-30" />
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-16 md:w-24 bg-gradient-to-r from-white to-transparent z-30" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-16 md:w-24 bg-gradient-to-l from-white to-transparent z-30" />
 
           <div
-            className="flex gap-10 animate-right"
+            className="flex gap-6 md:gap-10 animate-right"
             style={{ animationPlayState: isPaused ? "paused" : "running" }}
           >
-            {[...logos, ...logos].map((logo, i) => (
-              <img key={i} src={logo} className="h-24 w-auto object-contain" />
+            {[...shuffledLogos2, ...shuffledLogos2].map((logo, i) => (
+              <img
+                key={i}
+                src={logo}
+                alt="logo sekolah"
+                className="h-14 md:h-20 w-auto object-contain opacity-80 hover:opacity-100 transition duration-300"
+              />
             ))}
           </div>
         </motion.div>

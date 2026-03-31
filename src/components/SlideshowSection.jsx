@@ -55,7 +55,14 @@ const slides = [
   },
   {
     title: "Manajemen Absensi",
-    description: "Sistem absensi siswa dan guru yang otomatis dan akurat.",
+    description: (
+  <>
+    Sistem absensi siswa dan{" "}
+    guru
+    <br className="block md:hidden" />{" "}
+    yang otomatis dan akurat.
+  </>
+),
     image: s2,
     items: [
       {
@@ -76,7 +83,11 @@ const slides = [
     ],
   },
   {
-    title: "Manajemen Guru Piket",
+    title: (
+  <>
+    Manajemen <br className="block md:hidden" /> Guru Piket
+  </>
+),
     description: "Atur dan pantau tugas guru piket secara optimal.",
     image: s3,
     items: [
@@ -179,7 +190,7 @@ export default function SlideshowSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 overflow-hidden"
+      className="relative py-12 md:py-24 overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -226,19 +237,17 @@ export default function SlideshowSection() {
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
               {/* HEADER */}
-              <div className="text-center mb-40 relative z-10">
+              <div className="text-center mb-10 md:mb-20 px-2 relative z-10">
                 <h2 className="text-4xl lg:text-5xl font-bold text-[#33B77E] mb-3">
                   {slide.title}
                 </h2>
-                <p
-                  className="text-base lg:text-lg text-gray-700max-w-5xl  mx-auto whitespace-nowrap"
-                >
+                <p className="text-sm md:text-base lg:text-lg text-gray-700 max-w-xl mx-auto leading-relaxed whitespace-pre-line">
                   {slide.description}
                 </p>
               </div>
 
               {/* CONTENT - MAIN GRID dengan RELATIVE position */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center relative">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0 items-center relative">
                 {/* TEXT COLUMN - z-index lebih tinggi */}
                 <div
                   className={`relative z-10 ${
@@ -255,7 +264,7 @@ export default function SlideshowSection() {
                         className="grid grid-cols-[auto_1fr] gap-5 items-start"
                       >
                         {/* Icon Column */}
-                        <div className="w-16 h-16 rounded-2xl bg-[#B8E6D5] flex items-center justify-center text-[#33B77E] text-2xl">
+                        <div className="w-12 h-12 md:w-16 md:h-16 text-xl md:text-2xl bg-[#B8E6D5] flex items-center justify-center text-[#33B77E] text-2xl">
                           {item.icon}
                         </div>
                         {/* Text Column */}
@@ -293,8 +302,8 @@ export default function SlideshowSection() {
                           transparent 75%
                         )
                       `,
-                      width: "900px",
-                      height: "900px",
+                      width: window.innerWidth < 768 ? "400px" : "900px",
+                      height: window.innerWidth < 768 ? "400px" : "900px",
                       filter: "blur(60px)",
                       zIndex: -1,
                     }}
@@ -309,9 +318,8 @@ export default function SlideshowSection() {
                       className="w-full h-auto object-contain transition-transform duration-500"
                       style={{
                         filter: "drop-shadow(0px 20px 50px rgba(0,0,0,0.12))",
-                        transform: "scale(1.15)",
-                        maxWidth: "600px",
-                        maxHeight: "500px",
+                        transform: "scale(1)",
+                        maxWidth: "100%",
                       }}
                     />
                   </div>

@@ -1,4 +1,3 @@
-// src/components/ManajementSection.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import dashboardFront from "../assets/dashboard2.png";
@@ -7,79 +6,87 @@ import bgPattern from "../assets/bg.png";
 
 export default function FreeTrialCTA() {
   return (
-    <section className="relative overflow-hidden py-20 bg-gradient-to-b from-white via-[#E8F5F0] to-[#33B77E]">
-      {/* BACKGROUND PATTERN */}
+    <section className="relative overflow-hidden py-14 md:py-20 bg-gradient-to-b from-white via-[#E8F5F0] to-[#33B77E]">
+      
+      {/* BACKGROUND */}
       <div
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0 opacity-30"
         style={{
           backgroundImage: `url(${bgPattern})`,
-          backgroundSize: "800px 800px",
+          backgroundSize: "600px",
           backgroundPosition: "center bottom",
           backgroundRepeat: "repeat-x",
         }}
       />
-      <div className="relative z-10 max-w-7xl mx-auto px-8 text-center">
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
 
         {/* ================= HEADER ================= */}
         <motion.div
-          initial={{ opacity: 0, y: -60 }}
+          initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{
-            duration: 1.5,
-            ease: [0.22, 1, 0.36, 1],
-          }}
+          transition={{ duration: 1 }}
         >
-          <h2 className="text-[#33B77E] font-bold text-4xl sm:text-5xl md:text-6xl mb-8">
+          <h2 className="text-[#33B77E] font-bold text-2xl sm:text-3xl md:text-5xl mb-6 md:mb-8 leading-tight">
             Coba Ontime Gratis 14 Hari
           </h2>
 
-          <div className="mb-16">
-            <button className="border-2 border-[#33B77E] text-[#33B77E] font-semibold rounded-full px-16 py-3 text-base hover:bg-[#33B77E] hover:text-white transition-all duration-300">
+          <div className="mb-10 md:mb-16">
+            <button className="
+              border-2 border-[#33B77E] text-[#33B77E]
+              font-semibold rounded-full
+              px-6 py-2.5 sm:px-8 sm:py-3
+              text-sm sm:text-base
+              hover:bg-[#33B77E] hover:text-white
+              transition-all duration-300
+              w-full sm:w-auto
+            ">
               Coba Gratis
             </button>
           </div>
         </motion.div>
 
+        {/* ================= MOCKUP ================= */}
+        <div className="relative w-full max-w-5xl mx-auto">
 
-        {/* ================= MOCKUP AREA ================= */}
-        <div className="relative w-full max-w-6xl mx-auto">
-          <div className="relative h-[400px] sm:h-[500px] lg:h-[600px] xl:h-[700px]">
+          {/* MOBILE: STACK */}
+          <div className="flex flex-col items-center gap-4 sm:hidden">
+            <img
+              src={dashboardFront}
+              alt="Dashboard Monitoring Absensi"
+              className="w-full max-w-sm"
+            />
+            <img
+              src={dashboardBack}
+              alt="Dashboard Kalender Akademik"
+              className="w-full max-w-sm"
+            />
+          </div>
 
-            {/* DASHBOARD BELAKANG (KANAN) */}
+          {/* DESKTOP: OVERLAP */}
+          <div className="hidden sm:block relative h-[400px] md:h-[500px] lg:h-[600px]">
+
+            {/* BELAKANG */}
             <motion.div
-              initial={{ opacity: 0, x: 100 }}
+              initial={{ opacity: 0, x: 80 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{
-                duration: 0.9,
-                ease: "easeOut",
-                delay: 0.8, // muncul setelah header
-              }}
-              className="absolute right-20 bottom-0 w-[50%] sm:w-[55%] lg:w-[50%] z-10"
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="absolute right-0 bottom-0 w-[55%] md:w-[50%] z-10"
             >
-              <img
-                src={dashboardBack}
-                alt="Dashboard Kalender Akademik"
-              />
+              <img src={dashboardBack} alt="Dashboard Kalender Akademik" />
             </motion.div>
 
-            {/* DASHBOARD DEPAN (KIRI) */}
+            {/* DEPAN */}
             <motion.div
-              initial={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0, x: -80 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{
-                duration: 0.9,
-                ease: "easeOut",
-                delay: 0.8, // sedikit setelah belakang
-              }}
-              className="absolute left-20 top-0 w-[50%] sm:w-[55%] lg:w-[50%] z-20"
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="absolute left-0 top-0 w-[55%] md:w-[50%] z-20"
             >
-              <img
-                src={dashboardFront}
-                alt="Dashboard Monitoring Absensi"
-              />
+              <img src={dashboardFront} alt="Dashboard Monitoring Absensi" />
             </motion.div>
 
           </div>
