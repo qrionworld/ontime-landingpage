@@ -8,17 +8,17 @@ export default function PricingPackages() {
 
   const pricing = {
     3: [
-      { tier: "Tier 1", range: "1 - 500 Siswa", price: "1.500.000" },
+      { tier: "Tier 1", range: "1 - 500 Siswa", price: "2.000.000" },
       { tier: "Tier 2", range: "501 - 1000 Siswa", price: "2.500.000" },
       
     ],
     6: [
-      { tier: "Tier 1", range: "1 - 500 Siswa", price: "9.000.000" },
+      { tier: "Tier 1", range: "1 - 500 Siswa", price: "12.000.000" },
       { tier: "Tier 2", range: "501 - 1000 Siswa", price: "15.000.000" },
      
     ],
     12: [
-      { tier: "Tier 1", range: "1 - 500 Siswa", price: "18.000.000" },
+      { tier: "Tier 1", range: "1 - 500 Siswa", price: "24.000.000" },
       { tier: "Tier 2", range: "501 - 1000 Siswa", price: "30.000.000" },
     ],
   };
@@ -71,7 +71,7 @@ export default function PricingPackages() {
 
           {/* TOGGLE */}
           <div className="flex w-full max-w-md border border-[#33B77E] rounded-xl overflow-hidden">
-            {["1", "6", "12"].map((p) => (
+            {["3", "6", "12"].map((p) => (
               <button
                 key={p}
                 onClick={() => setPlan(p)}
@@ -80,7 +80,7 @@ export default function PricingPackages() {
                   ${plan === p ? "bg-[#33B77E] text-white" : "text-[#33B77E]"}
                 `}
               >
-                {p === "1" ? "3 Bulan" : p === "6" ? "6 Bulan" : "1 Tahun"}
+                {p === "3" ? "3 Bulan" : p === "6" ? "6 Bulan" : p === "12" ? "12 Bulan" : ""}
               </button>
             ))}
           </div>
