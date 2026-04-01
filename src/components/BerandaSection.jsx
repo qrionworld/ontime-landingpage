@@ -11,7 +11,6 @@ import gradientRight from "../assets/gradienkan.png";
 export default function BerandaSection() {
   return (
     <section id="beranda" className="relative pt-16 bg-white overflow-hidden">
-      
       {/* BG GRADIENT */}
       <motion.img
         src={gradientLeft}
@@ -33,10 +32,8 @@ export default function BerandaSection() {
 
       {/* CONTENT */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 pt-14 pb-10">
-
         {/* MOBILE → Column | Desktop → Grid */}
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 items-center">
-
           {/* LEFT CONTENT */}
           <motion.div
             initial={{ opacity: 0, x: -80 }}
@@ -64,21 +61,27 @@ export default function BerandaSection() {
 
             {/* BUTTONS */}
             <div className="mt-6 md:mt-8 flex flex-col sm:flex-row items-center sm:justify-start gap-3 sm:gap-4 w-full">
-              <button
+              {/* Tombol Konsultasi Gratis (WA API) */}
+              <a
+                href="https://wa.link/yqn562"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 
-                          text-white font-semibold rounded-full shadow-md transition
-                          bg-gradient-to-r from-[#33B77E] to-[#2FA570] hover:opacity-90"
+               text-white font-semibold rounded-full shadow-md transition
+               bg-gradient-to-r from-[#33B77E] to-[#2FA570] hover:opacity-90"
               >
                 <img src={icon} alt="WA" className="w-5 h-5" />
                 Konsultasi Gratis
-              </button>
+              </a>
 
-              <button 
+              {/* Tombol Coba Gratis */}
+              <a
+                href=" "
                 className="w-full sm:w-auto px-6 py-3 border-2 border-[#33B77E] 
-                          text-[#33B77E] font-semibold rounded-full hover:bg-[#e8fff4] transition"
+               text-[#33B77E] font-semibold rounded-full hover:bg-[#e8fff4] transition"
               >
                 Coba Gratis
-              </button>
+              </a>
             </div>
 
             <p className="mt-4 text-xs md:text-sm text-gray-500">
@@ -99,7 +102,6 @@ export default function BerandaSection() {
               className="w-full max-w-md md:max-w-2xl object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.12)] -rotate-1"
             />
           </motion.div>
-
         </div>
       </div>
     </section>
