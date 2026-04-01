@@ -10,12 +10,10 @@ export default function PricingPackages() {
     3: [
       { tier: "Tier 1", range: "1 - 500 Siswa", price: "6.000.000" },
       { tier: "Tier 2", range: "501 - 1000 Siswa", price: "7.500.000" },
-      
     ],
     6: [
       { tier: "Tier 1", range: "1 - 500 Siswa", price: "12.000.000" },
       { tier: "Tier 2", range: "501 - 1000 Siswa", price: "15.000.000" },
-     
     ],
     12: [
       { tier: "Tier 1", range: "1 - 500 Siswa", price: "24.000.000" },
@@ -80,14 +78,20 @@ export default function PricingPackages() {
                   ${plan === p ? "bg-[#33B77E] text-white" : "text-[#33B77E]"}
                 `}
               >
-                {p === "3" ? "3 Bulan" : p === "6" ? "6 Bulan" : p === "12" ? "12 Bulan" : ""}
+                {p === "3"
+                  ? "3 Bulan"
+                  : p === "6"
+                    ? "6 Bulan"
+                    : p === "12"
+                      ? "12 Bulan"
+                      : ""}
               </button>
             ))}
           </div>
         </motion.div>
 
         {/* ================= PRICING CARDS ================= */}
-       <div className="max-w-5xl mx-auto" />
+        <div className="max-w-5xl mx-auto" />
         <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4">
           {pricing[plan].map((item, index) => (
             <motion.div
@@ -139,7 +143,7 @@ export default function PricingPackages() {
           viewport={{ once: true }}
           className="mt-16 md:mt-24"
         >
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-10">
+          <h3 className="text-xl sm:text-sm md:text-3xl font-bold mb-6 md:mb-10">
             Tingkatkan Produktivitas dengan{" "}
             <span className="text-[#33B77E]">Add-On</span>
           </h3>
