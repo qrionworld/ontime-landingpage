@@ -8,8 +8,8 @@ export default function PricingPackages() {
 
   const pricing = {
     3: [
-      { tier: "Tier 1", range: "1 - 500 Siswa", price: "2.000.000" },
-      { tier: "Tier 2", range: "501 - 1000 Siswa", price: "2.500.000" },
+      { tier: "Tier 1", range: "1 - 500 Siswa", price: "6.000.000" },
+      { tier: "Tier 2", range: "501 - 1000 Siswa", price: "7.500.000" },
       
     ],
     6: [
