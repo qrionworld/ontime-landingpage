@@ -11,6 +11,7 @@ import Kebutuhan from "./components/Kebutuhan";
 import Testimoni from "./components/Testimoni";
 import PricingPackages from "./components/PricingPackages";
 import FreeTrialCTA from "./components/FreeTrialCTA";
+import Footer from "./components/Footer";
 
 import CustomCursor from "./components/CustomCursor";
 
@@ -41,6 +42,7 @@ function App() {
               <Testimoni />
               <PricingPackages />
               <FreeTrialCTA />
+              <Footer/>
             </div>
           }
         />
