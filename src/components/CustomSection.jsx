@@ -25,7 +25,7 @@ export default function CustomSection() {
             </p>
 
             <a
-              href="https://wa.wizard.id/3492f6"
+              href="https://wa.wizard.id/26d596"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 md:mt-24 bg-[#33B77E] text-white px-8 md:px-12 py-4 md:py-6 rounded-full text-lg md:text-2xl font-bold flex items-center justify-center gap-3 md:gap-4 mx-auto transition-all duration-300 hover:bg-[#2a9a6a] hover:scale-[1.03]"
@@ -50,7 +50,7 @@ export default function CustomSection() {
             </p>
 
             <a
-              href="https://wa.wizard.id/3492f6"
+              href="https://wa.wizard.id/26d596"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#33B77E] text-white px-8 md:px-12 py-4 md:py-6 rounded-full text-lg md:text-2xl font-bold flex items-center justify-center gap-3 md:gap-4 mx-auto transition-all duration-300 hover:bg-[#2a9a6a] hover:scale-[1.03]"
