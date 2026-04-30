@@ -43,9 +43,12 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-4 flex items-center justify-between">
-
         {/* LOGO */}
-        <img src={logo} alt="Ontuition" className="h-12 md:h-14 cursor-pointer" />
+        <img
+          src={logo}
+          alt="Ontuition"
+          className="h-12 md:h-14 cursor-pointer"
+        />
 
         {/* DESKTOP MENU */}
         <nav className="hidden lg:flex items-center gap-10">
@@ -66,21 +69,24 @@ export default function Header() {
 
         {/* DESKTOP BUTTONS */}
         <div className="hidden lg:flex items-center gap-3">
-          <Link
-            to="/register"
+          <a
+            href="https://admin.ontime.qrion.id"
             className="px-7 py-2.5 text-lg font-semibold text-[#33B77E] border-2 border-[#33B77E] rounded-full hover:bg-[#33B77E] hover:text-white transition"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Daftar
-          </Link>
+          </a>
 
-          <Link
-            to="/login"
+          <a
+            href="https://admin.ontime.qrion.id/login"
             className="px-7 py-2.5 text-lg font-semibold text-white bg-[#33B77E] rounded-full hover:bg-[#2a9a6a] transition"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Log in
-          </Link>
+            Login
+          </a>
         </div>
-
         {/* MOBILE HAMBURGER */}
         <button
           className="lg:hidden text-3xl text-[#231F20]"
