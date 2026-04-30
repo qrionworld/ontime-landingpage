@@ -23,29 +23,33 @@ export default function FreeTrialCTA() {
 
         {/* ================= HEADER ================= */}
         <motion.div
-          initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          <h2 className="text-[#33B77E] font-bold text-2xl sm:text-3xl md:text-5xl mb-6 md:mb-8 leading-tight">
-            Coba Ontime Gratis 14 Hari
-          </h2>
+  initial={{ opacity: 0, y: -40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1 }}
+>
+  <h2 className="text-[#33B77E] font-bold text-2xl sm:text-3xl md:text-5xl mb-6 md:mb-8 leading-tight">
+    Coba Ontime Gratis 14 Hari
+  </h2>
 
-          <div className="mb-10 md:mb-16">
-            <button className="
-              border-2 border-[#33B77E] text-[#33B77E]
-              font-semibold rounded-full
-              px-6 py-2.5 sm:px-8 sm:py-3
-              text-sm sm:text-base
-              hover:bg-[#33B77E] hover:text-white
-              transition-all duration-300
-              w-full sm:w-auto
-            ">
-              Coba Gratis
-            </button>
-          </div>
-        </motion.div>
+  <div className="mb-10 md:mb-16">
+    <a
+      href="https://wa.me/628216195202?text=Halo%20Min,%20saya%20ingin%20konsultasi%20gratis%20terkait%20sistem%20absensi%20digital%20Ontime.%20Boleh%20dibantu?"
+      className="
+        inline-block
+        border-2 border-[#33B77E] text-[#33B77E]
+        font-semibold rounded-full
+        px-6 py-2.5 sm:px-8 sm:py-3
+        text-sm sm:text-base
+        hover:bg-[#33B77E] hover:text-white
+        transition-all duration-300
+        w-full sm:w-auto text-center
+      "
+    >
+      Coba Gratis
+    </a>
+  </div>
+</motion.div>
 
         {/* ================= MOCKUP ================= */}
         <div className="relative w-full max-w-5xl mx-auto">

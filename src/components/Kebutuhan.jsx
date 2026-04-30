@@ -83,7 +83,7 @@ export default function Kebutuhan() {
               )}
 
               <a
-                href="https://wa.me/628xxxxxxxxxx"
+                href="https://wa.me/628216195202?text=Halo%20Min,%20saya%20ingin%20konsultasi%20gratis%20terkait%20sistem%20absensi%20digital%20Ontime.%20Boleh%20dibantu?"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="

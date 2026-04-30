@@ -63,7 +63,7 @@ export default function BerandaSection() {
             <div className="mt-6 md:mt-8 flex flex-col sm:flex-row items-center sm:justify-start gap-3 sm:gap-4 w-full">
               {/* Tombol Konsultasi Gratis (WA API) */}
               <a
-                href="https://wa.wizard.id/26d596"
+                href="https://wa.me/628216195202?text=Halo%20Min,%20saya%20ingin%20konsultasi%20gratis%20terkait%20sistem%20absensi%20digital%20Ontime.%20Boleh%20dibantu?"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 

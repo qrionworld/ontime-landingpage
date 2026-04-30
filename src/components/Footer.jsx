@@ -107,7 +107,7 @@ export default function Footer({ scrollToSection }) {
 
             <div className="mt-6">
               <a
-                href="https://wa.wizard.id/26d596"
+                href="https://wa.me/628216195202?text=Halo%20Min,%20saya%20ingin%20konsultasi%20gratis%20terkait%20sistem%20absensi%20digital%20Ontime.%20Boleh%20dibantu?"
                 className="flex items-center justify-center gap-2 bg-[#25D366] text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-[#1ebe5c] transition"
               >
                 <Icon icon="ic:baseline-whatsapp" className="h-5" />

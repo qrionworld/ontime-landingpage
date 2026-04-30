@@ -25,7 +25,7 @@ export default function CustomSection() {
             </p>
 
             <a
-              href="https://wa.wizard.id/26d596"
+              href="https://wa.me/628216195202?text=Halo%20Min,%20saya%20ingin%20konsultasi%20gratis%20terkait%20sistem%20absensi%20digital%20Ontime.%20Boleh%20dibantu?"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 md:mt-24 bg-[#33B77E] text-white px-8 md:px-12 py-4 md:py-6 rounded-full text-lg md:text-2xl font-bold flex items-center justify-center gap-3 md:gap-4 mx-auto transition-all duration-300 hover:bg-[#2a9a6a] hover:scale-[1.03]"
@@ -50,7 +50,7 @@ export default function CustomSection() {
             </p>
 
             <a
-              href="https://wa.wizard.id/26d596"
+              href="https://wa.me/628216195202?text=Halo%20Min,%20saya%20ingin%20konsultasi%20gratis%20terkait%20sistem%20absensi%20digital%20Ontime.%20Boleh%20dibantu?"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#33B77E] text-white px-8 md:px-12 py-4 md:py-6 rounded-full text-lg md:text-2xl font-bold flex items-center justify-center gap-3 md:gap-4 mx-auto transition-all duration-300 hover:bg-[#2a9a6a] hover:scale-[1.03]"
